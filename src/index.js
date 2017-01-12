@@ -1,10 +1,8 @@
-/*eslint-disable no-unused-vars*/
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+var React = require('react');
+var ReactDom = require('react-dom');
 var routes = require('./config/routes');
 
-ReactDOM.render(
+ReactDom.render(
   routes,
   document.getElementById('root')
 );
