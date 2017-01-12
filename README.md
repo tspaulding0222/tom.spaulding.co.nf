@@ -26,7 +26,7 @@ As of right now just simply
 
 * 'npm start' to start the app locally
 
-## CurrentTechUsed
+## Current Tech Used
 
 * [React JS](https://facebook.github.io/react/)
 * [Code Mirror](https://codemirror.net/)
