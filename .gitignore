@@ -23,6 +23,8 @@ npm-debug.log
 .idea/tasks.xml
 
 # Sensitive or high-churn files:
+.idea/*
+.idea/vcs.xml
 .idea/dataSources/
 .idea/dataSources.ids
 .idea/dataSources.xml
@@ -57,3 +59,11 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+.idea/encodings.xml
+.idea/jsLibraryMappings.xml
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/
+.idea/misc.xml
+.idea/modules.xml
+.idea/tom.spaulding.co.nf_v2.iml
+.idea/watcherTasks.xml
