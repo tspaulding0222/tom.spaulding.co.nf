@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 The Tom Spaulding Home Page.
-This is the site I use to run experiments, tore various bookmarks, try new frameworks, and generally anything 
+This is the site I use to run experiments, store various bookmarks/tools, try new frameworks, and generally anything 
 I would like to show off to a client or in an interview.
 
 The site can be found live at [tomspaulding.co.nf](http://tomspaulding.co.nf/)
