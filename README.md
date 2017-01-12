@@ -8,9 +8,9 @@ The site can be found live at [tomspaulding.co.nf](http://tomspaulding.co.nf/)
 
 ## Table of Contents
 
-- [Installation](#Installation)
-- [Running](#Running)
-- [Current Tech Used](#Current Tech Used)
+- [Installation](#installation)
+- [Running](#running)
+- [Current Tech Used](#current-tech-used)
 
 
 ## Installation
@@ -26,7 +26,7 @@ As of right now just simply
 
 * 'npm start' to start the app locally
 
-## Current Tech Used
+## CurrentTechUsed
 
 * [React JS](https://facebook.github.io/react/)
 * [Code Mirror](https://codemirror.net/)
