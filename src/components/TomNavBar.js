@@ -19,14 +19,17 @@ var NavBar = React.createClass({
                         <IndexLinkContainer to={{pathname: '/', query:{}}}>
                             <NavItem eventKey={1}>Home</NavItem>
                         </IndexLinkContainer>
+                        <LinkContainer to={{pathname: '/pastProjects', query:{}}}>
+                            <NavItem eventKey={2}>Past Work</NavItem>
+                        </LinkContainer>
                         <LinkContainer to={{pathname: '/frontEndTools', query:{}}}>
-                            <NavItem eventKey={2}>Front End Tools</NavItem>
+                            <NavItem eventKey={3}>Front End Tools</NavItem>
                         </LinkContainer>
                         <LinkContainer to={{pathname: '/androidTools', query:{}}}>
-                            <NavItem eventKey={3}>Android Tools</NavItem>
+                            <NavItem eventKey={4}>Android Tools</NavItem>
                         </LinkContainer>
                         <LinkContainer to={{pathname: '/codeEditor', query:{}}}>
-                            <NavItem eventKey={4}>Code Editor</NavItem>
+                            <NavItem eventKey={5}>Code Editor</NavItem>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
