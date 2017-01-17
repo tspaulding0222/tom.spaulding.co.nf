@@ -20,7 +20,7 @@ var NavBar = React.createClass({
                             <NavItem eventKey={1}>Home</NavItem>
                         </IndexLinkContainer>
                         <LinkContainer to={{pathname: '/pastProjects', query:{}}}>
-                            <NavItem eventKey={2}>Past Work</NavItem>
+                            <NavItem eventKey={2}>Projects</NavItem>
                         </LinkContainer>
                         <LinkContainer to={{pathname: '/frontEndTools', query:{}}}>
                             <NavItem eventKey={3}>Front End Tools</NavItem>

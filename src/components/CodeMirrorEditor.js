@@ -36,6 +36,10 @@ var CodeMirrorEditor = React.createClass({
 
         return (
             <div className="container">
+                <div className="container jumbotron">
+                    <h3>Code Mirror Online Code Editor</h3>
+                    <h5>For those lil code snippets that need work when on the go!</h5>
+                </div>
                 <div style={{border: '1px solid lightgray'}}>
                     <CodeMirror value={this.state.code} onChange={this.updateCode} options={options}/>
                 </div>

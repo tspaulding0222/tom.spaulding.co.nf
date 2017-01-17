@@ -7,7 +7,7 @@ var PastProjects = React.createClass({
             <div className="container">
                 <div className="container jumbotron">
                     <h3>
-                        My Past Work
+                        My Current and Past Projects
                     </h3>
                     <h5>Please click any item to link to see more info.</h5>
                 </div>
@@ -42,6 +42,18 @@ var PastProjects = React.createClass({
                             icon={require("file-loader!../img/brickBreaker.png")}
                             title="Breakout Game"
                             desc="Basic Brick Braker Game for Android. Demonstrates knowledge of how to create a basic game engine using Java and Android Tools"/>
+                    </a>
+                    <a style={styles.blackText} href="http://handguncombatives.com/">
+                        <ProjectGridItem
+                            icon={require("file-loader!../img/handguncombatives.png")}
+                            title="Handgun Combatives Website"
+                            desc="Create website for Handgun Combatives. I still update this website with new blog posts, images, and various other content when client asks."/>
+                    </a>
+                    <a style={styles.blackText} href="http://www.eventsplannedllc.com/">
+                        <ProjectGridItem
+                            icon={require("file-loader!../img/eventsplanned.jpg")}
+                            title="Handgun Combatives Website"
+                            desc="Events Planned LLC website. This was created with strikingly template and had custom code injected into to make the site more custom."/>
                     </a>
                 </div>
             </div>
