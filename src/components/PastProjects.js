@@ -28,8 +28,8 @@ var PastProjects = React.createClass({
                     <a style={styles.blackText} href="http://www.protobuildbar.com/">
                         <ProjectGridItem
                             icon={require("file-loader!../img/proto.png")}
-                            title="Proto Build Bar Website"
-                            desc="Proto Build Bar with parallax scrolling, background video, gsap animations and custom created single page navigation"/>
+                            title="Proto Build Bar"
+                            desc="Proto Build Bar website with parallax scrolling, background video, gsap animations and custom created single page navigation"/>
                     </a>
                     <a style={styles.blackText} href="https://github.com/tspaulding0222/SplashWall">
                         <ProjectGridItem
@@ -46,14 +46,20 @@ var PastProjects = React.createClass({
                     <a style={styles.blackText} href="http://handguncombatives.com/">
                         <ProjectGridItem
                             icon={require("file-loader!../img/handguncombatives.png")}
-                            title="Handgun Combatives Website"
+                            title="Handgun Combatives"
                             desc="Create website for Handgun Combatives. I still update this website with new blog posts, images, and various other content when client asks."/>
                     </a>
                     <a style={styles.blackText} href="http://www.eventsplannedllc.com/">
                         <ProjectGridItem
                             icon={require("file-loader!../img/eventsplanned.jpg")}
-                            title="Handgun Combatives Website"
+                            title="Events Planned LLC"
                             desc="Events Planned LLC website. This was created with strikingly template and had custom code injected into to make the site more custom."/>
+                    </a>
+                    <a style={styles.blackText} href="https://www.technologyfirst.org/magazines/2014/33-september/997-istable-new-application-technology-to-revolutionize-an-industry.html">
+                        <ProjectGridItem
+                            icon={require("file-loader!../img/pontac.png")}
+                            title="Pontac Project"
+                            desc="Series of Windows 8 apps that helped in tracking/managment of thoroughbred race horses. Created with Javascript, HTML5, and CSS3"/>
                     </a>
                 </div>
             </div>

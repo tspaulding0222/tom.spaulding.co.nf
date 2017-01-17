@@ -1,8 +1,14 @@
 var React = require('React');
+var PropTypes = React.PropTypes;
 var ReactBootstrap = require('react-bootstrap');
 var Col = ReactBootstrap.Col;
 
 var ProjectGridItem = React.createClass({
+    propTypes:{
+        icon: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        desc: PropTypes.string.isRequired
+    },
     render: function(){
         return(
             <Col style={Styles.col} xs={6} md={4}>
