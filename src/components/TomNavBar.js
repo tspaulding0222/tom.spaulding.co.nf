@@ -22,8 +22,11 @@ var NavBar = React.createClass({
                         <LinkContainer to={{pathname: '/frontEndTools', query:{}}}>
                             <NavItem eventKey={2}>Front End Tools</NavItem>
                         </LinkContainer>
+                        <LinkContainer to={{pathname: '/androidTools', query:{}}}>
+                            <NavItem eventKey={3}>Android Tools</NavItem>
+                        </LinkContainer>
                         <LinkContainer to={{pathname: '/codeEditor', query:{}}}>
-                            <NavItem eventKey={2}>Code Editor</NavItem>
+                            <NavItem eventKey={4}>Code Editor</NavItem>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>

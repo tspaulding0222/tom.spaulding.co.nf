@@ -1,4 +1,5 @@
 var React = require('react');
+var LastContainerBottomMargin = require("../styles/CustomStyles").LastContainerBottomMargin;
 
 var FrontEndTools = React.createClass({
     render: function () {
@@ -165,7 +166,7 @@ var FrontEndTools = React.createClass({
                     </ul>
                 </div>
 
-                <div id="other" className="container">
+                <div id="other" className="container" style={LastContainerBottomMargin}>
                     <h3>Canvas</h3>
                     <ul>
                         <li><a href="https://stocksnap.io/" target="_blank">Stock Snap</a></li>
