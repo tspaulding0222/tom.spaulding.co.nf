@@ -1,8 +1,10 @@
 var React = require('react');
 var ExperienceGridItem = require('./ExperienceGridItem');
+var ContactGridItem = require('./ContactGridItem');
 var ReactBootstrap = require('react-bootstrap');
 var Col = ReactBootstrap.Col;
 var LastContainerBottomMargin = require("../styles/CustomStyles").LastContainerBottomMargin;
+var blackLinkTextColor = require("../styles/CustomStyles").blackLinkTextColor;
 
 var Main = React.createClass({
     render: function () {
@@ -25,10 +27,9 @@ var Main = React.createClass({
                     </p>
                 </div>
 
-                <div style={LastContainerBottomMargin} className="container">
-                    <h4>Experience</h4>
-
+                <div style={LastContainerBottomMargin}>
                     <Col xs={12} md={8}>
+                        <h4>Experience</h4>
                         <ExperienceGridItem
                             icon={require("file-loader!../img/realart.png")}
                             title="Real Art"
@@ -53,6 +54,29 @@ var Main = React.createClass({
                             job="Engineering Technician"
                             timePeriod="April 2009 - August 2010"
                             desc="Aid in the development of various software packages that enhanced the student experience.afi"/>
+                    </Col>
+                    <Col xs={12} md={4} style={{textAlign: "right"}}>
+                        <h4>Contact</h4>
+                        <a style={blackLinkTextColor} href="mailto:t.spaulding11@gmail.com">
+                            <ContactGridItem
+                                icon={require('file-loader!../img/gmail.png')}
+                                title="Gmail"/>
+                        </a>
+                        <a style={blackLinkTextColor} href="mailto:t.spaulding11@gmail.com">
+                            <ContactGridItem
+                                icon={require('file-loader!../img/hangouts.png')}
+                                title="Hangouts"/>
+                        </a>
+                        <a style={blackLinkTextColor} href="https://www.facebook.com/tspaulding2">
+                            <ContactGridItem
+                                icon={require('file-loader!../img/facebook.png')}
+                                title="Facebook"/>
+                        </a>
+                        <a style={blackLinkTextColor} href="https://www.linkedin.com/in/tspaulding">
+                            <ContactGridItem
+                                icon={require('file-loader!../img/linkedin.png')}
+                                title="Linked In"/>
+                        </a>
                     </Col>
                 </div>
             </div>
