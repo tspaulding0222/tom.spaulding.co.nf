@@ -29,13 +29,16 @@ var CodeMirrorEditor = React.createClass({
             code: defaults[mode]
         });
     },
+    componentDidMount: function(){
+        TweenLite.to(document.querySelector(".codeEditorPage"), 2, {opacity: 1, ease: Power0.easeIn});
+    },
     render: function () {
         var options = {
             lineNumbers: true
         };
 
         return (
-            <div className="container">
+            <div style={{opacity: 0}} className="codeEditorPage container">
                 <div className="container jumbotron">
                     <h3>Code Mirror Online Code Editor</h3>
                     <h5>For those lil code snippets that need work when on the go!</h5>

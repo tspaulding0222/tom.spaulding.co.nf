@@ -2,7 +2,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/public/index.html',
     filename: 'index.html',
-    inject: 'body'
+    inject: 'body',
+    favicon: __dirname + "/public/favicon.ico",
 });
 
 module.exports = {
@@ -14,11 +15,10 @@ module.exports = {
         filename: "index_bundle.js"
     },
     debug: true,
-    devtool: "eval-source-map",
+    devtool: "source-map",
     module:{
         loaders: [
             {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
-            {test: /\.ico$/, loader: "file-loader!./favicon.ico"}
         ]
     },
     plugins: [HtmlWebpackPluginConfig]
