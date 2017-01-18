@@ -13,6 +13,7 @@ var NavBar = React.createClass({
                     <Navbar.Brand>
                         Tom Spaulding
                     </Navbar.Brand>
+                    <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
