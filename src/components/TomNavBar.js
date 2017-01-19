@@ -11,12 +11,12 @@ var NavBar = React.createClass({
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        Tom Spaulding
+                        <img src={require('file-loader!../img/logo.png')}/>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav>
+                    <Nav pullRight>
                         <IndexLinkContainer to={{pathname: '/', query:{}}}>
                             <NavItem eventKey={1}>Home</NavItem>
                         </IndexLinkContainer>
@@ -32,6 +32,18 @@ var NavBar = React.createClass({
                         <LinkContainer to={{pathname: '/codeEditor', query:{}}}>
                             <NavItem eventKey={5}>Code Editor</NavItem>
                         </LinkContainer>
+                        <NavItem className="navbar-no-hover-bg" href="mailto:t.spaulding11@gmail.com" eventKey={6}>
+                            <img className="navbar-image-link" src={require('file-loader!../img/gmail.png')} />
+                        </NavItem>
+                        <NavItem className="navbar-no-hover-bg" href="mailto:t.spaulding11@gmail.com" eventKey={7}>
+                            <img className="navbar-image-link" src={require('file-loader!../img/hangouts.png')} />
+                        </NavItem>
+                        <NavItem className="navbar-no-hover-bg" href="https://www.facebook.com/tspaulding2" eventKey={8}>
+                            <img className="navbar-image-link" src={require('file-loader!../img/facebook.png')} />
+                        </NavItem>
+                        <NavItem className="navbar-no-hover-bg" href="https://www.linkedin.com/in/tspaulding" eventKey={9}>
+                            <img className="navbar-image-link" src={require('file-loader!../img/linkedin.png')} />
+                        </NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

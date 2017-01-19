@@ -50,6 +50,7 @@ var Styles = {
         marginTop : '0px'
     },
     col:{
-        paddingBottom: '15px'
+        paddingBottom: '15px',
+        minHeight: "220px",
     }
 };

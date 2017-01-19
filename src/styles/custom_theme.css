@@ -1,0 +1,101 @@
+/**
+    Things to Remember
+    Blue -> #1761A0
+ */
+
+/**
+    Common Usages
+ */
+.verticalCenterFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/**
+    End of Common Usages
+ */
+
+/**
+    Navbar Styling
+ */
+.navbar-default{
+    background-color: white;
+}
+
+.navbar-brand{
+    padding: 5px 5px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+    color: white;
+    background-color: #1761A0;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #1761A0;
+}
+
+.navbar-default .navbar-nav>li.navbar-no-hover-bg>a{
+    line-height: 30px;
+    padding: 10px 10px;
+}
+
+.navbar-image-link{
+    max-height: 28px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    background-color: transparent;
+}
+
+.navbar-image-link:hover{
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.navbar-default .navbar-nav>li.navbar-no-hover-bg>a:hover{
+    background-color: transparent;
+}
+/**
+    End of Navbar Styling
+ */
+
+/**
+    Jumbotron Styling
+ */
+.jumbotron{
+    margin-bottom: 10;
+    margin-top: 40px;
+    padding: 10px 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jumbotron .jumbotron-overline{
+    max-width: 100px;
+    min-width: 50px;
+    height: 2px;
+    background-color: #1761A0;
+}
+
+.jumbotron h6{
+    color: darkgray;
+    margin-bottom: 6px;
+}
+
+.jumbotron h3{
+    margin-top: 0;
+}
+
+
+/**
+    End Jumbotron Styling
+ */

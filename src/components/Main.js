@@ -1,7 +1,11 @@
 var React = require('react');
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
+//Global Requirement for entire webapp here!!!!
 var TomNavBar = require('./TomNavBar');
-require('style-loader!css-loader!../styles/test.css');
+require('style-loader!css-loader!../styles/CSS_Animations.css');
+require('style-loader!css-loader!../styles/custom_theme.css');
+//End of Global Requirements
 
 var Main = React.createClass({
     render: function () {
