@@ -1,15 +1,24 @@
 /**
     Things to Remember
     Blue -> #1761A0
+    Dark Gray -> #565656
+    Light Gray -> #A9A9A9
  */
 
 /**
     Common Usages
  */
+body{
+    font-family: 'Ek Mukta', sans-serif;
+}
 .verticalCenterFlex{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.container{
+    padding: 0;
 }
 /**
     End of Common Usages
@@ -60,6 +69,18 @@
 
 .navbar-default .navbar-nav>li.navbar-no-hover-bg>a:hover{
     background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li:hover, .navbar-default .navbar-nav>li>a:hover{
+    cursor: pointer;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+    margin-left: 0;
+}
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+    margin-left: 0;
+    margin-right: 0;
 }
 /**
     End of Navbar Styling

@@ -1,5 +1,6 @@
 var React = require('react');
 var CodeMirror = require('react-codemirror');
+var TweenMax = require('../libs/TweenMax.min.js');
 
 require('codemirror/mode/javascript/javascript');
 require('codemirror/mode/xml/xml');
@@ -30,7 +31,7 @@ var CodeMirrorEditor = React.createClass({
         });
     },
     componentDidMount: function(){
-        TweenLite.to(document.querySelector(".codeEditorPage"), 2, {opacity: 1, ease: Power0.easeIn});
+        TweenMax.to(document.querySelector(".codeEditorPage"), 2, {opacity: 1, ease: Power0.easeIn});
     },
     render: function () {
         var options = {

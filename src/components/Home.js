@@ -17,10 +17,10 @@ var Main = React.createClass({
                 </div>
 
                 <div className="container">
-                    <Col xs={12} s={3} md={2}>
+                    <Col xs={12} sm={3} md={2}>
                         <img style={styles.profileImage} className="profileImage" src={require('file-loader!../img/me.jpg')}/>
                     </Col>
-                    <Col xs={12} s={9} md={10}>
+                    <Col xs={12} sm={9} md={10}>
                         <p>
                             I came to appreciate the fields of Mobile/Web Development while working as an Assistant Web Enginerring Technician
                             with the Air Force Institute of Technology. The things I could make and do within the field astounded me. I love
@@ -43,32 +43,44 @@ var Main = React.createClass({
                 </div>
 
                 <div style={LastContainerBottomMargin}>
-                    <Col xs={12} md={8}>
-                        <h4>Experience</h4>
+                    <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/realart.png")}
+                            icon={require("file-loader!../img/ra.png")}
                             title="Real Art"
-                            job="Web Developer/Mobile Developer"
+                            job="Web & Mobile Developer"
                             timePeriod="October 2014 - Current"
-                            desc="Responsible for each assigned project's look-and-feel, and is expected to uphold the company's high standard of design and execution."/>
+                            desc="Responsible for each assigned project's look-and-feel, and is expected to uphold the company's high standard
+                            of design and execution."
+                            buttonColor="#DA291C"/>
+                    </Col>
+                    <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/sogeti.png")}
+                            icon={require("file-loader!../img/sogeti.jpg")}
                             title="Sogeti"
                             job="Consultant/Developer"
                             timePeriod="January 2013 - October 2014"
-                            desc="Work in partnership with various clients, advising them how to use information technology in order to meet their business goals and objectives. As a consultant with a strong development background I work to improve many various applications and mobile apps to improve the structure and efficiency of an organization."/>
+                            desc="Work in partnership with various clients, advising them how to use information technology in order to meet
+                            their business goals and objectives. As a consultant with a strong development background I work to improve many
+                            various applications and mobile apps to improve the structure and efficiency of an organization."
+                            buttonColor="#EC4630"/>
+                    </Col>
+                    <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/morgan.png")}
+                            icon={require("file-loader!../img/morgan.jpg")}
                             title="Morgan AM&T"
                             job="Java Developer"
                             timePeriod="April 2011 - December 2012"
-                            desc="Developer Java Web-Apps that aided in production of various carbon products."/>
+                            desc="Developed Java Web-Apps that aided in production of various carbon products."
+                            buttonColor="#A9DB44"/>
+                    </Col>
+                    <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/afit.png")}
+                            icon={require("file-loader!../img/afit_cover.jpg")}
                             title="Air Force Institute of Technology"
                             job="Engineering Technician"
                             timePeriod="April 2009 - August 2010"
-                            desc="Aid in the development of various software packages that enhanced the student experience.afi"/>
+                            desc="Aid in the development of various software packages that enhanced the student experience."
+                            buttonColor="#94938E"/>
                     </Col>
                 </div>
             </div>
