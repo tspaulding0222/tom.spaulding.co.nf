@@ -13,14 +13,14 @@ var PlayButtonAnimation = React.createClass({
         return container.offsetHeight;
     },
     runPlayButtonAnimation: function () {
-        let playButton = document.getElementById("greensockAnimationsPlayButton");
-        let playButtonContainer = document.getElementById("play_button_animations");
+        var playButton = document.getElementById("greensockAnimationsPlayButton");
+        var playButtonContainer = document.getElementById("play_button_animations");
 
-        let containerWidth = this.getContainerWidth(playButtonContainer);
-        let containerHeight = this.getContainerHeight(playButtonContainer);
-        let playButtonWidth = this.getContainerWidth(playButton);
-        let animateXTo = (containerWidth / 2) + (playButtonWidth / 2);
-        let animateYTo = containerHeight + this.getContainerHeight(playButton);
+        var containerWidth = this.getContainerWidth(playButtonContainer);
+        var containerHeight = this.getContainerHeight(playButtonContainer);
+        var playButtonWidth = this.getContainerWidth(playButton);
+        var animateXTo = (containerWidth / 2) + (playButtonWidth / 2);
+        var animateYTo = containerHeight + this.getContainerHeight(playButton);
 
         tl = new TimelineMax();
         tl.add("start", 0);
@@ -30,7 +30,7 @@ var PlayButtonAnimation = React.createClass({
     },
     componentDidMount: function () {
         //Assign the on click to the play button
-        let that = this;
+        var that = this;
         $(".playButtonAnimationStartButton").click(function(){
             that.runPlayButtonAnimation();
         });
