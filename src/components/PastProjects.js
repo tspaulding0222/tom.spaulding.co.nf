@@ -1,11 +1,15 @@
 var React = require('react');
+var Common = require('../libs/Common');
 var ProjectGridItem = require('./ProjectGridItem');
 var LinkColor = require("../styles/CustomStyles").blackLinkTextColor;
 
 var PastProjects = React.createClass({
+    componentDidMount: function(){
+        Common.pageFadeIn(document.querySelector(".projectsPage"));
+    },
     render: function () {
         return (
-            <div className="container">
+            <div style={{opacity: '0'}} className="projectsPage container">
                 <div className="container jumbotron">
                     <div className="jumbotron-overline"></div>
                     <h6>List of all the major projects I have worked on or did myself.</h6>

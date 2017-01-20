@@ -6,7 +6,7 @@
  */
 
 /**
-    Common Usages
+    Common
  */
 body{
     font-family: 'Ek Mukta', sans-serif;
@@ -21,11 +21,11 @@ body{
     padding: 0;
 }
 /**
-    End of Common Usages
+    End of Common
  */
 
 /**
-    Navbar Styling
+    Default Bootstrap Overrides
  */
 .navbar-default{
     background-color: white;
@@ -82,13 +82,12 @@ body{
     margin-left: 0;
     margin-right: 0;
 }
-/**
-    End of Navbar Styling
- */
 
-/**
-    Jumbotron Styling
- */
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    background-color: #1761A0;
+    color: white;
+}
+
 .jumbotron{
     margin-bottom: 10;
     margin-top: 40px;
@@ -116,7 +115,12 @@ body{
     margin-top: 0;
 }
 
+.dropdown-menu{
+    border: none;
+    padding: 0;
+}
+
 
 /**
-    End Jumbotron Styling
+    End of Default Bootstrap Overrides
  */

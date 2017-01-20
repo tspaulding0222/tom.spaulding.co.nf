@@ -1,7 +1,10 @@
 var React = require('react');
+var ReactBootstrap = require('react-bootstrap');
 var Navbar = require('react-bootstrap/lib/Navbar');
 var NavItem = require('react-bootstrap/lib/NavItem');
 var Nav = require('react-bootstrap/lib/Nav');
+var NavDropdown = ReactBootstrap.NavDropdown;
+var MenuItem = ReactBootstrap.MenuItem;
 var LinkContainer = require('react-router-bootstrap/lib/LinkContainer');
 var IndexLinkContainer = require('react-router-bootstrap/lib/IndexLinkContainer');
 
@@ -29,6 +32,11 @@ var NavBar = React.createClass({
                         <LinkContainer to={{pathname: '/androidTools', query:{}}}>
                             <NavItem eventKey={4}>Android Tools</NavItem>
                         </LinkContainer>
+                        <NavDropdown eventKey={10} title="Just for Fun" id="justForFunDropdown">
+                            <LinkContainer to={{pathname: '/greensockAnimations', query: {}}}>
+                                <MenuItem eventKey={11}>Greensock Animations</MenuItem>
+                            </LinkContainer>
+                        </NavDropdown>
                         <LinkContainer to={{pathname: '/codeEditor', query:{}}}>
                             <NavItem eventKey={5}>Code Editor</NavItem>
                         </LinkContainer>

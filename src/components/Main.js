@@ -16,7 +16,7 @@ var Main = React.createClass({
                     component="div"
                     transitionName="example"
                     transitionEnterTimeout={500}
-                    transitionLeaveTimeout={500}>
+                    transitionLeaveTimeout={100}>
                     {React.cloneElement(this.props.children, {
                         key: this.props.location.pathname
                     })}

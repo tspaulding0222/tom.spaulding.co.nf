@@ -4,7 +4,6 @@ var ContactGridItem = require('./ContactGridItem');
 var ReactBootstrap = require('react-bootstrap');
 var Col = ReactBootstrap.Col;
 var LastContainerBottomMargin = require("../styles/CustomStyles").LastContainerBottomMargin;
-var blackLinkTextColor = require("../styles/CustomStyles").blackLinkTextColor;
 
 var Main = React.createClass({
     render: function () {
