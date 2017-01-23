@@ -9,11 +9,11 @@ var CirclePathAnimation = React.createClass({
     componentDidMount: function(){
         //Assign the on click to the play button
         var that = this;
-        $(".playButtonAnimationStartButton").click(function(){
+        $(".circleButtonAnimationStartButton").click(function(){
             that.runAnimation();
         });
 
-        $(".playButtonResetButton").click(function(){
+        $(".circleButtonResetButton").click(function(){
             tl.timeScale(5);
             tl.reverse();
         });
@@ -86,8 +86,8 @@ var CirclePathAnimation = React.createClass({
                     {miniPinkBalls}
                 </div>
                 <div style={styles.buttonContainer}>
-                    <Button className="playButtonAnimationStartButton" style={styles.button}>Start</Button>
-                    <Button className="playButtonResetButton" style={styles.button}>Reset/Reverse</Button>
+                    <Button className="circleButtonAnimationStartButton" style={styles.button}>Start</Button>
+                    <Button className="circleButtonResetButton" style={styles.button}>Reset/Reverse</Button>
                 </div>
             </div>
         )
