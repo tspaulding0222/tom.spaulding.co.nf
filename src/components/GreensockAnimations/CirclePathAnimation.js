@@ -32,6 +32,7 @@ var CirclePathAnimation = React.createClass({
         var circleHeight = 100;
 
         var pinkBallX = (containerleft - document.getElementById("pinkBall").getBoundingClientRect().left);
+        var blueBallX = (containerleft - document.getElementById("blueBall").getBoundingClientRect().left);
 
         tl = new TimelineMax();
         tl.add(TweenMax.to("#blueBall", 1, {y: containerHeight, ease: Bounce.easeOut}));
@@ -59,18 +60,24 @@ var CirclePathAnimation = React.createClass({
         dotsTimeline.add("start", 0);
 
         Array.prototype.slice.call(document.querySelectorAll(".miniPinkBall")).forEach(function(index){
-            var randX = Math.floor(Math.random() * 600) + 400;
-            var randY = Math.floor(Math.random()*200) + 1;
+            var randX = Math.floor(Math.random() * 600) + 200;
+            var randY = Math.floor(Math.random()*300) + 1;
             randY *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
 
             dotsTimeline.add(TweenMax.to(index, 2, {x: randX, y: randY, opacity: 0}), 'start')
         });
 
         tl.add(dotsTimeline);
+
+        tl.add(TweenMax.to("#blueBall", 2, {y: '-=' + containerHeight/2, ease: Power0.easeInOut}));
+        tl.add(TweenMax.to("#blueBall", .35, {x: '+=' + blueBallX, delay: 0.25, ease: Power4.easeIn}));
+        tl.add(TweenMax.to("#blueBall", .5, {scaleX: 0.1, transformOrigin: "0% 50%"}));
+        tl.add(TweenMax.to("#blueBall", .25, {scaleX: 1, transformOrigin: "0%, 50%"}));
+        tl.add(TweenMax.to("#blueBall", 1.5, {x: containerWidth}), "-= .25")
     },
     render: function () {
         var miniPinkBalls = [];
-        for(var i=0; i<50; i++){
+        for(var i=0; i<100; i++){
             miniPinkBalls.push(<div style={styles.miniPinkBall} className="miniPinkBall" key={i}></div>);
         }
 
