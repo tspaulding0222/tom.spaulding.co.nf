@@ -62,7 +62,8 @@ var styles = {
     playAnimationContainer:{
         display: "flex",
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: '40px'
     },
     playButtonAnimationContainer: {
         width: '80%',
