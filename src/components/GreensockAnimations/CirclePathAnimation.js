@@ -14,7 +14,7 @@ var CirclePathAnimation = React.createClass({
         });
 
         $(".circleButtonResetButton").click(function(){
-            tl.timeScale(5);
+            tl.timeScale(20);
             tl.reverse();
         });
     },
@@ -27,9 +27,6 @@ var CirclePathAnimation = React.createClass({
         var containerHeight = container.offsetHeight;
         var containerRect = container.getBoundingClientRect();
         var containerleft = containerRect.left;
-
-        var circleWidth = 100;
-        var circleHeight = 100;
 
         var pinkBallX = (containerleft - document.getElementById("pinkBall").getBoundingClientRect().left);
         var blueBallX = (containerleft - document.getElementById("blueBall").getBoundingClientRect().left);
@@ -67,13 +64,38 @@ var CirclePathAnimation = React.createClass({
             dotsTimeline.add(TweenMax.to(index, 2, {x: randX, y: randY, opacity: 0}), 'start')
         });
 
-        tl.add(dotsTimeline);
+        tl.add(dotsTimeline, '-=.06');
 
         tl.add(TweenMax.to("#blueBall", 2, {y: '-=' + containerHeight/2, ease: Power0.easeInOut}));
         tl.add(TweenMax.to("#blueBall", .35, {x: '+=' + blueBallX, delay: 0.25, ease: Power4.easeIn}));
         tl.add(TweenMax.to("#blueBall", .5, {scaleX: 0.1, transformOrigin: "0% 50%"}));
         tl.add(TweenMax.to("#blueBall", .25, {scaleX: 1, transformOrigin: "0%, 50%"}));
-        tl.add(TweenMax.to("#blueBall", 1.5, {x: containerWidth}), "-= .25")
+        tl.add(TweenMax.to("#blueBall", 1.5, {x: containerWidth}), "-= .25");
+        tl.add(TweenMax.to("#whiteBall", .75, {x: 25}));
+
+        var purpleBallRight = document.getElementById("purpleBall");
+        var whiteBallLeft = document.getElementById("whiteBall");
+        var whiteBallBouncePurplesX = (whiteBallLeft.getBoundingClientRect().left + 25) - purpleBallRight.getBoundingClientRect().right;
+
+        tl.add(TweenMax.to("#whiteBall", .5, {x: '-=' + whiteBallBouncePurplesX}));
+
+        var purpleBall = document.getElementById("purpleBall");
+        var purplBallLeft = purpleBall.getBoundingClientRect().left;
+        var purpleBallWidth = purpleBall.offsetWidth;
+        var purpleBallLeftX = (purplBallLeft + purpleBallWidth) - containerleft;
+
+        tl.add(TweenMax.to("#purpleBall", .6, {x: '-=' + purpleBallLeftX}), "-=.05");
+
+        var greenBallLeft = document.getElementById("greenBall").getBoundingClientRect().left;
+        var distanceWhiteTravelToGreen = greenBallLeft - purpleBallRight.getBoundingClientRect().right - purpleBallWidth;
+
+        tl.add(TweenMax.to("#whiteBall", .5, {x: '+=' + distanceWhiteTravelToGreen}), '-=.6');
+
+        var containerRight = containerRect.right;
+        var greenBallGoTo = containerRight - greenBallLeft;
+
+        tl.add(TweenMax.to("#greenBall", 1, {x: '+=' + greenBallGoTo}), '-=.1');
+        tl.add(TweenMax.to("#whiteBall", 4, {scale: 100, backgroundColor: 'black', delay: 0.5}));
     },
     render: function () {
         var miniPinkBalls = [];
