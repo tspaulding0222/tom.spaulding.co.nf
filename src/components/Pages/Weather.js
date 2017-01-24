@@ -1,7 +1,7 @@
 var React = require('react');
 
 var Weather = React.createClass({
-    getInitialState(){
+    getInitialState: function(){
         return {
             lat: 1,
             long: 1,
