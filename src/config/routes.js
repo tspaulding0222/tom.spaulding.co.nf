@@ -11,6 +11,7 @@ var AndroidTools = require('../components/AndroidTools');
 var CodeEditor = require('../components/CodeMirrorEditor');
 var PastProjects = require('../components/PastProjects');
 var GreensockAnimations = require('../components/GreensockAnimations');
+var Weather = require('../components/Pages/Weather');
 
 var routes = (
     <Router history={hashHistory}>
@@ -21,6 +22,7 @@ var routes = (
             <Route path="codeEditor" header="Code Editor" component={CodeEditor}/>
             <Route path="pastProjects" header="Past Projects" component={PastProjects}/>
             <Route path="greensockAnimations" header="Greensock GSAP Animations" component={GreensockAnimations}/>
+            <Route path="weather" header="Weather" component={Weather}/>
         </Route>
     </Router>
 );

@@ -36,6 +36,9 @@ var NavBar = React.createClass({
                             <LinkContainer to={{pathname: '/greensockAnimations', query: {}}}>
                                 <MenuItem eventKey={11}>Greensock Animations</MenuItem>
                             </LinkContainer>
+                            <LinkContainer to={{pathname: '/weather', query: {}}}>
+                                <MenuItem eventKey={12}>Weather</MenuItem>
+                            </LinkContainer>
                         </NavDropdown>
                         <LinkContainer to={{pathname: '/codeEditor', query:{}}}>
                             <NavItem eventKey={5}>Code Editor</NavItem>
