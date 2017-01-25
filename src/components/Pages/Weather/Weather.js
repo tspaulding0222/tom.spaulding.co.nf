@@ -1,5 +1,7 @@
 var React = require('react');
 var openWeatherHelpers = require('../../../Utils/openWeatherHelpers');
+var CurrentWeather = require('./CurrentWeather');
+var Common = require('../../../libs/Common');
 
 var Weather = React.createClass({
     openWeatherApiEndPoint: "api.openweathermap.org",
@@ -7,7 +9,10 @@ var Weather = React.createClass({
         return {
             lat: 1,
             long: 1,
-            showLoader: true
+            showLoader: true,
+            icon: '',
+            currentTemp: '',
+            weatherDesc: ''
         }
     },
     geoLocationSuccess: function (position) {
@@ -25,7 +30,10 @@ var Weather = React.createClass({
             console.log(results);
 
             this.setState({
-                showLoader: false
+                showLoader: false,
+                icon: results.weather[0].id + '',
+                currentTemp: Math.round(results.main.temp) + '',
+                weatherDesc: results.weather[0].description
             });
         }.bind(this));
     },
@@ -47,7 +55,7 @@ var Weather = React.createClass({
     },
     getGeolocation: function (callback) {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position){
+            navigator.geolocation.getCurrentPosition(function (position) {
                 this.geoLocationSuccess(position);
                 callback(position.coords.latitude, position.coords.longitude);
             }.bind(this), this.geoLocationError, {});
@@ -57,20 +65,34 @@ var Weather = React.createClass({
         }
     },
     componentDidMount: function () {
+        Common.pageFadeIn(document.querySelector(".weatherPage"));
         this.getGeolocation(this.getCurrentWeatherData);
     },
     render: function () {
-        var loader = <div className="loader">Loading...</div>;
+        var tempLoader = <div className="loader">Loading...</div>;
+
+        var weatherCopy =
+            <div style={styles.weatherCopy}>
+                <CurrentWeather
+                    icon={this.state.icon}
+                    currentTemp={this.state.currentTemp}
+                    weatherDescription={this.state.weatherDesc}/>
+            </div>;
+
         if (this.state.showLoader == false) {
-            var loader = '';
+            Common.componentFadeOut(document.querySelector(".loader"), function(){
+                tempLoader = '';
+            });
+        }
+        else {
+            weatherCopy = '';
         }
 
+
         return (
-            <div style={styles.weather} className="weather container">
-                {loader}
-                <div style={styles.weatherCopy}>
-                    Behind Loader
-                </div>
+            <div style={styles.weather} className="weather container weatherPage">
+                {tempLoader}
+                {weatherCopy}
             </div>
         )
     }
@@ -83,9 +105,10 @@ var styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '83vh'
+        minHeight: '83vh',
+        opacity: '0'
     },
-    weatherCopy:{
+    weatherCopy: {
         position: 'absolute'
     }
 };
