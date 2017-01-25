@@ -5,13 +5,13 @@ var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 var Main = require('../components/Main');
-var Home = require('../components/Home');
+var Home = require('../components/Pages/Home/Home');
 var FrontEndTools = require('../components/FrontEndTools');
 var AndroidTools = require('../components/AndroidTools');
 var CodeEditor = require('../components/CodeMirrorEditor');
-var PastProjects = require('../components/PastProjects');
+var PastProjects = require('../components/Pages/PastProjects/PastProjects');
 var GreensockAnimations = require('../components/GreensockAnimations');
-var Weather = require('../components/Pages/Weather');
+var Weather = require('../components/Pages/Weather/Weather');
 
 var routes = (
     <Router history={hashHistory}>

@@ -23,7 +23,7 @@ var ExperienceGridItem = React.createClass({
                 </div>
                 <div style={styles.bottomInfoContainer}>
                     <div style={styles.timeLineContainer}>
-                        <img style={styles.timelineCalendarIcon} src={require('file-loader!../img/icon-calendar.png')} />
+                        <img style={styles.timelineCalendarIcon} src={require('file-loader!../../../img/icon-calendar.png')} />
                         <p style={styles.timelineCopy}>{this.props.timePeriod}</p>
                     </div>
                     <h2 style={styles.jobTitle}>{this.props.job}</h2>

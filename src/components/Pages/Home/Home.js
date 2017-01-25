@@ -1,9 +1,8 @@
 var React = require('react');
 var ExperienceGridItem = require('./ExperienceGridItem');
-var ContactGridItem = require('./ContactGridItem');
 var ReactBootstrap = require('react-bootstrap');
 var Col = ReactBootstrap.Col;
-var LastContainerBottomMargin = require("../styles/CustomStyles").LastContainerBottomMargin;
+var LastContainerBottomMargin = require("../../../styles/CustomStyles").LastContainerBottomMargin;
 
 var Main = React.createClass({
     render: function () {
@@ -17,7 +16,7 @@ var Main = React.createClass({
 
                 <div className="container">
                     <Col xs={12} sm={3} md={2}>
-                        <img style={styles.profileImage} className="profileImage" src={require('file-loader!../img/me.jpg')}/>
+                        <img style={styles.profileImage} className="profileImage" src={require('file-loader!../../../img/me.jpg')}/>
                     </Col>
                     <Col xs={12} sm={9} md={10}>
                         <p>
@@ -44,7 +43,7 @@ var Main = React.createClass({
                 <div style={LastContainerBottomMargin}>
                     <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/ra.png")}
+                            icon={require("file-loader!../../../img/ra.png")}
                             title="Real Art"
                             job="Web & Mobile Developer"
                             timePeriod="October 2014 - Current"
@@ -54,7 +53,7 @@ var Main = React.createClass({
                     </Col>
                     <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/sogeti.jpg")}
+                            icon={require("file-loader!../../../img/sogeti.jpg")}
                             title="Sogeti"
                             job="Consultant/Developer"
                             timePeriod="January 2013 - October 2014"
@@ -65,7 +64,7 @@ var Main = React.createClass({
                     </Col>
                     <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/morgan.jpg")}
+                            icon={require("file-loader!../../../img/morgan.jpg")}
                             title="Morgan AM&T"
                             job="Java Developer"
                             timePeriod="April 2011 - December 2012"
@@ -74,7 +73,7 @@ var Main = React.createClass({
                     </Col>
                     <Col xs={12} sm={6} md={4}>
                         <ExperienceGridItem
-                            icon={require("file-loader!../img/afit_cover.jpg")}
+                            icon={require("file-loader!../../../img/afit_cover.jpg")}
                             title="Air Force Institute of Technology"
                             job="Engineering Technician"
                             timePeriod="April 2009 - August 2010"

@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactBootstrap = require("react-bootstrap");
 var Button = ReactBootstrap.Button;
-var TweenMax = require("../../libs/TweenMax.min.js");
+var TweenMax = require("../../../libs/TweenMax.min.js");
 
 var tl = null;
 
@@ -45,7 +45,7 @@ var PlayButtonAnimation = React.createClass({
             <div style={styles.playAnimationContainer}>
                 <div style={styles.playButtonAnimationContainer} id="play_button_animations">
                     <img id="greensockAnimationsPlayButton" style={styles.playButtonImg}
-                         src={require("file-loader!../../img/play_button.png")}/>
+                         src={require("file-loader!../../../img/play_button.png")}/>
                 </div>
                 <div style={styles.buttonContainer}>
                     <Button className="playButtonAnimationStartButton" style={styles.playButtonStartButton}>Start</Button>
