@@ -32,7 +32,6 @@ var CurrentWeather = React.createClass({
     render: function () {
         return (
             <div className="currentWeatherComponent" style={styles.container}>
-                <div></div>
                 <i style={styles.icon} className={"wi " + this.state.icon}/>
                 <div>
                     <h4 style={styles.weatherDesc}>{this.props.weatherDescription}</h4>
@@ -53,7 +52,8 @@ var styles ={
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        opacity: '0'
+        opacity: '0',
+        marginBottom: '40px'
     },
     icon: {
         fontSize: '10em',

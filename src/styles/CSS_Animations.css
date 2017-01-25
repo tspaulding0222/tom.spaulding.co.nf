@@ -28,8 +28,8 @@
 .loader {
     color: #1761A0;
     text-indent: -9999em;
-    margin: 88px auto;
-    position: relative;
+    margin: auto;
+    position: absolute;
     font-size: 11px;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);

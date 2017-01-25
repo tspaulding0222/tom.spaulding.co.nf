@@ -2,6 +2,7 @@ var React = require('react');
 var openWeatherHelpers = require('../../../Utils/openWeatherHelpers');
 var CurrentWeather = require('./CurrentWeather');
 var Common = require('../../../libs/Common');
+var FiveDayForecast = require('./FiveDayForecast');
 
 var Weather = React.createClass({
     openWeatherApiEndPoint: "api.openweathermap.org",
@@ -15,6 +16,19 @@ var Weather = React.createClass({
             weatherDesc: ''
         }
     },
+    getWeatherData: function (lat, lon) {
+        openWeatherHelpers.getAllWeatherData(lat, lon).then(function (results) {
+            console.log("Got Weather Data");
+            console.log(results);
+
+            this.setState({
+                showLoader: false,
+                icon: results.current.weather[0].id + '',
+                currentTemp: Math.round(results.current.main.temp) + '',
+                weatherDesc: results.current.weather[0].description
+            });
+        }.bind(this));
+    },
     geoLocationSuccess: function (position) {
         this.setState({
             lat: position.coords.latitude,
@@ -23,19 +37,6 @@ var Weather = React.createClass({
 
         console.log("Got Position");
         console.log(position);
-    },
-    getCurrentWeatherData: function (lat, lon) {
-        openWeatherHelpers.getCurrentWeatherData(lat, lon).then(function (results) {
-            console.log("Got weather");
-            console.log(results);
-
-            this.setState({
-                showLoader: false,
-                icon: results.weather[0].id + '',
-                currentTemp: Math.round(results.main.temp) + '',
-                weatherDesc: results.weather[0].description
-            });
-        }.bind(this));
     },
     geoLocationError: function (error) {
         switch (error.code) {
@@ -66,7 +67,9 @@ var Weather = React.createClass({
     },
     componentDidMount: function () {
         Common.pageFadeIn(document.querySelector(".weatherPage"));
-        this.getGeolocation(this.getCurrentWeatherData);
+        this.getGeolocation(function (lat, lon) {
+            this.getWeatherData(lat, lon)
+        }.bind(this));
     },
     render: function () {
         var tempLoader = <div className="loader">Loading...</div>;
@@ -77,17 +80,17 @@ var Weather = React.createClass({
                     icon={this.state.icon}
                     currentTemp={this.state.currentTemp}
                     weatherDescription={this.state.weatherDesc}/>
+                <FiveDayForecast/>
             </div>;
 
         if (this.state.showLoader == false) {
-            Common.componentFadeOut(document.querySelector(".loader"), function(){
-                tempLoader = '';
+            Common.componentFadeOut(document.querySelector(".loader"), function () {
+                document.querySelector(".loader").parentNode.removeChild(document.querySelector(".loader"));
             });
         }
         else {
             weatherCopy = '';
         }
-
 
         return (
             <div style={styles.weather} className="weather container weatherPage">
@@ -109,6 +112,6 @@ var styles = {
         opacity: '0'
     },
     weatherCopy: {
-        position: 'absolute'
+        width: '100%'
     }
 };
