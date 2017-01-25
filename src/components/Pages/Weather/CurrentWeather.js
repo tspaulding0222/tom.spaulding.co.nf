@@ -33,7 +33,7 @@ var CurrentWeather = React.createClass({
         return (
             <div className="currentWeatherComponent" style={styles.container}>
                 <div></div>
-                <i style={styles.icon} className={"wi " + this.state.icon}></i>
+                <i style={styles.icon} className={"wi " + this.state.icon}/>
                 <div>
                     <h4 style={styles.weatherDesc}>{this.props.weatherDescription}</h4>
                 </div>
@@ -73,5 +73,3 @@ var styles ={
         margin: '0'
     }
 };
-
-var weatherIconMap
