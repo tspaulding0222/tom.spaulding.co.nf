@@ -84,9 +84,7 @@ var Weather = React.createClass({
             </div>;
 
         if (this.state.showLoader == false) {
-            Common.componentFadeOut(document.querySelector(".loader"), function () {
-                document.querySelector(".loader").parentNode.removeChild(document.querySelector(".loader"));
-            });
+            Common.componentFadeOut(document.querySelector(".loader"));
         }
         else {
             weatherCopy = '';
