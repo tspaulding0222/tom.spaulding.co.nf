@@ -1,7 +1,7 @@
 var React = require("react");
 var ReactBootstrap = require("react-bootstrap");
 var Button = ReactBootstrap.Button;
-var TweenMax = require("../../libs/TweenMax.min.js");
+var TweenMax = require("../../../libs/TweenMax.min.js");
 
 var tl = null;
 

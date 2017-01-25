@@ -6,11 +6,11 @@ var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 var Main = require('../components/Main');
 var Home = require('../components/Pages/Home/Home');
-var FrontEndTools = require('../components/FrontEndTools');
-var AndroidTools = require('../components/AndroidTools');
-var CodeEditor = require('../components/CodeMirrorEditor');
+var FrontEndTools = require('../components/Pages/FrontEndTools');
+var AndroidTools = require('../components/Pages/AndroidTools');
+var CodeEditor = require('../components/Pages/CodeMirrorEditor');
 var PastProjects = require('../components/Pages/PastProjects/PastProjects');
-var GreensockAnimations = require('../components/GreensockAnimations');
+var GreensockAnimations = require('../components/Pages/GreensockAnimations/GreensockAnimations');
 var Weather = require('../components/Pages/Weather/Weather');
 
 var routes = (

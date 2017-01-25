@@ -1,5 +1,5 @@
 var React = require('react');
-var LastContainerBottomMargin = require("../styles/CustomStyles").LastContainerBottomMargin;
+var LastContainerBottomMargin = require("../../styles/CustomStyles").LastContainerBottomMargin;
 
 var AndroidTools = React.createClass({
     render: function () {

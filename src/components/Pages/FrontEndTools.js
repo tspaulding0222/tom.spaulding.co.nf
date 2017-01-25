@@ -1,5 +1,5 @@
 var React = require('react');
-var LastContainerBottomMargin = require("../styles/CustomStyles").LastContainerBottomMargin;
+var LastContainerBottomMargin = require("../../styles/CustomStyles").LastContainerBottomMargin;
 
 var FrontEndTools = React.createClass({
     render: function () {

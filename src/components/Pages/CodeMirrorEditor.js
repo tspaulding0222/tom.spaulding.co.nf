@@ -1,7 +1,7 @@
 var React = require('react');
-var Common = require('../libs/Common');
+var Common = require('../../libs/Common');
 var CodeMirror = require('react-codemirror');
-var TweenMax = require('../libs/TweenMax.min.js');
+var TweenMax = require('../../libs/TweenMax.min.js');
 
 require('codemirror/mode/javascript/javascript');
 require('codemirror/mode/xml/xml');

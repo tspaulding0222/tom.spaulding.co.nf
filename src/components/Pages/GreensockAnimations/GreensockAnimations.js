@@ -1,8 +1,8 @@
 var React = require("react");
-var Common = require('../libs/Common');
-var LastContainerBottomMargin = require('../styles/CustomStyles').LastContainerBottomMargin;
-var PlayButtonAnimation = require('./GreensockAnimations/PlayButtonAnimation');
-var CirclePathAnimation = require('./GreensockAnimations/CirclePathAnimation');
+var Common = require('../../../libs/Common');
+var LastContainerBottomMargin = require('../../../styles/CustomStyles').LastContainerBottomMargin;
+var PlayButtonAnimation = require('./PlayButtonAnimation');
+var CirclePathAnimation = require('./CirclePathAnimation');
 
 var GreensockAnimations = React.createClass({
     componentDidMount: function(){
