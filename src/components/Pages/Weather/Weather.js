@@ -144,7 +144,7 @@ var Weather = React.createClass({
             this.getWeatherData(data.location.lat, data.location.lng)
 
             console.log("Got Position By Google API");
-            console.log(position);
+            console.log(data);
         }.bind(this));
     },
     getGeolocation: function (callback) {
