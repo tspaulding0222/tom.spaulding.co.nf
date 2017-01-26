@@ -2,6 +2,7 @@ var React = require('react');
 var ReactBootstrap = require('react-bootstrap');
 var PropTypes = React.PropTypes;
 var Col = ReactBootstrap.Col;
+var Common = require('../../../libs/Common');
 var OpenWeatherIconMap = require('../../../Utils/OpenWeatherIconMap');
 
 var FiveDayForecast = React.createClass({
@@ -25,11 +26,12 @@ var FiveDayForecast = React.createClass({
         }
     },
     componentDidMount: function(){
+        Common.pageFadeIn(document.querySelector(".fiveDayForecastComponent"));
         this.getWeatherIcon();
     },
     render: function () {
         return (
-            <div style={styles.pageContainer}>
+            <div className="fiveDayForecastComponent" style={styles.pageContainer}>
                 <div style={styles.row}>
                     <Col xs={2}>
                         {/*<i style={styles.icon} className={"wi " + this.state.icon}/>*/}
@@ -60,7 +62,8 @@ var styles = {
         display: 'flex',
         flexDirection: "column",
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        opacity: '0'
     },
     row: {
         borderBottom: '1px solid #1761A0',

@@ -91,9 +91,13 @@ var Weather = React.createClass({
         }
 
         return (
-            <div style={styles.weather} className="weather container weatherPage">
-                {tempLoader}
-                {weatherCopy}
+            <div>
+                <div style={styles.loaderContainer}>
+                    {tempLoader}
+                </div>
+                <div style={styles.weather} className="weather container weatherPage">
+                    {weatherCopy}
+                </div>
             </div>
         )
     }
@@ -108,6 +112,11 @@ var styles = {
         alignItems: 'center',
         minHeight: '83vh',
         opacity: '0'
+    },
+    loaderContainer: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%'
     },
     weatherCopy: {
         width: '100%'
