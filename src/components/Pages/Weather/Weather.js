@@ -3,6 +3,7 @@ var openWeatherHelpers = require('../../../Utils/openWeatherHelpers');
 var CurrentWeather = require('./CurrentWeather');
 var Common = require('../../../libs/Common');
 var FiveDayForecast = require('./FiveDayForecast');
+var GoogleGeoLocation = require('../../../Utils/GoogleGeoLocation');
 
 var Weather = React.createClass({
     openWeatherApiEndPoint: "api.openweathermap.org",
@@ -134,20 +135,17 @@ var Weather = React.createClass({
         console.log(position);
     },
     geoLocationError: function (error) {
-        switch (error.code) {
-            case error.PERMISSION_DENIED:
-                alert("User denied the request for Geolocation.");
-                break;
-            case error.POSITION_UNAVAILABLE:
-                alert("Location information is unavailable.");
-                break;
-            case error.TIMEOUT:
-                alert("The request to get user location timed out.");
-                break;
-            default:
-                alert("An unknown error occurred.");
-                break;
-        }
+        GoogleGeoLocation.tryGoogleApiLocation().then(function(data){
+            this.setState({
+                lat: data.location.lat,
+                long: data.location.lng
+            });
+
+            this.getWeatherData(data.location.lat, data.location.lng)
+
+            console.log("Got Position By Google API");
+            console.log(position);
+        }.bind(this));
     },
     getGeolocation: function (callback) {
         if (navigator.geolocation) {
@@ -157,7 +155,7 @@ var Weather = React.createClass({
             }.bind(this), this.geoLocationError, {});
         }
         else {
-            alert("Geolocation is not supported on your browser");
+            this.geoLocationError("Geolocation is not supported on your browser");
         }
     },
     componentDidMount: function () {
