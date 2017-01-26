@@ -7,7 +7,13 @@ var OpenWeatherIconMap = require('../../../Utils/OpenWeatherIconMap');
 
 var FiveDayForecast = React.createClass({
     propTypes: {
-        // icon: PropTypes.string.isRequired
+        icon: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        day: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        wind: PropTypes.string.isRequired,
+        maxMinTemp: PropTypes.string.isRequired,
+        humidity: PropTypes.string.isRequired
     },
     getInitialState: function(){
         return {
@@ -26,7 +32,8 @@ var FiveDayForecast = React.createClass({
         }
     },
     componentDidMount: function(){
-        Common.pageFadeIn(document.querySelector(".fiveDayForecastComponent"));
+        var rows = Array.prototype.slice.call(document.querySelectorAll(".fiveDayForecastComponent"));
+        Common.pageFadeIn(rows);
         this.getWeatherIcon();
     },
     render: function () {
@@ -34,20 +41,19 @@ var FiveDayForecast = React.createClass({
             <div className="fiveDayForecastComponent" style={styles.pageContainer}>
                 <div style={styles.row}>
                     <Col xs={2}>
-                        {/*<i style={styles.icon} className={"wi " + this.state.icon}/>*/}
-                        icon
+                        <i style={styles.icon} className={"wi " + this.state.icon}/>
                     </Col>
                     <Col xs={4}>
-                        <div>Day</div>
-                        <div>Date</div>
+                        <div>{this.props.day}</div>
+                        <div>{this.props.date}</div>
                     </Col>
                     <Col xs={4}>
-                        <div>Desc</div>
-                        <div>Wind</div>
+                        <div>{this.props.description}</div>
+                        <div>{this.props.wind}</div>
                     </Col>
                     <Col xs={2}>
-                        <div>max/min temp</div>
-                        <div>Humid</div>
+                        <div>{this.props.maxMinTemp}</div>
+                        <div>{this.props.humidity}</div>
                     </Col>
                 </div>
             </div>
@@ -71,7 +77,7 @@ var styles = {
         minHeigh: '50px'
     },
     icon: {
-        fontSize: '5em',
+        fontSize: '2em',
         color: '#1761A0'
     }
 };
