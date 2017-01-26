@@ -78,7 +78,7 @@ var Weather = React.createClass({
         var wind = [];
 
         for (var i = 1; i < 6; i++) {
-            wind.push(forecastList[i].speed + ' mph');
+            wind.push(Math.round(forecastList[i].speed) + ' MPH');
         }
 
         return wind;
@@ -87,7 +87,7 @@ var Weather = React.createClass({
         var maxMinTemp = [];
 
         for (var i = 1; i < 6; i++) {
-            var maxMinString = forecastList[i].temp.min + '/' + forecastList[i].temp.max;
+            var maxMinString = Math.round(forecastList[i].temp.min) + '° / ' + Math.round(forecastList[i].temp.max) + '°';
             maxMinTemp.push(maxMinString);
         }
 
@@ -171,6 +171,12 @@ var Weather = React.createClass({
 
         var fiveDayForecasts = [];
         for(var i=0; i<5; i++){
+
+            var border = true;
+            if(i==4){
+                border = false;
+            }
+
             fiveDayForecasts.push(
                 <FiveDayForecast
                     key={i}
@@ -180,7 +186,8 @@ var Weather = React.createClass({
                     description={this.state.forecastDesc[i]}
                     wind={this.state.forecastWindSpeed[i]}
                     maxMinTemp={this.state.forecastMaxMinTemp[i]}
-                    humidity={this.state.forecastHumidity[i]}/>
+                    humidity={this.state.forecastHumidity[i]}
+                    addBorder={border}/>
             );
         }
 
