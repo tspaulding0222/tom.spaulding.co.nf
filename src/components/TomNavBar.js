@@ -32,17 +32,20 @@ var NavBar = React.createClass({
                         <LinkContainer to={{pathname: '/androidTools', query:{}}}>
                             <NavItem eventKey={4}>Android Tools</NavItem>
                         </LinkContainer>
-                        <NavDropdown eventKey={10} title="Just for Fun" id="justForFunDropdown">
+                        <NavDropdown eventKey={10} title="Misc" id="justForFunDropdown">
+                            <LinkContainer to={{pathname: '/codeEditor', query: {}}}>
+                                <MenuItem eventKey={5}>Code Editor</MenuItem>
+                            </LinkContainer>
                             <LinkContainer to={{pathname: '/greensockAnimations', query: {}}}>
                                 <MenuItem eventKey={11}>Greensock Animations</MenuItem>
                             </LinkContainer>
                             <LinkContainer to={{pathname: '/weather', query: {}}}>
                                 <MenuItem eventKey={12}>Weather</MenuItem>
                             </LinkContainer>
+                            <LinkContainer to={{pathname: '/rssReader', query: {}}}>
+                                <MenuItem eventKey={12}>RSS Reader</MenuItem>
+                            </LinkContainer>
                         </NavDropdown>
-                        <LinkContainer to={{pathname: '/codeEditor', query:{}}}>
-                            <NavItem eventKey={5}>Code Editor</NavItem>
-                        </LinkContainer>
                         <NavItem className="navbar-no-hover-bg" href="mailto:t.spaulding11@gmail.com" eventKey={6}>
                             <img className="navbar-image-link" src={require('file-loader!../img/gmail.png')} />
                         </NavItem>
