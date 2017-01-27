@@ -45,6 +45,9 @@ var NavBar = React.createClass({
                             <LinkContainer to={{pathname: '/rssReader', query: {}}}>
                                 <MenuItem eventKey={12}>RSS Reader</MenuItem>
                             </LinkContainer>
+                            <LinkContainer to={{pathname: '/tomRssReader', query: {}}}>
+                                <MenuItem eventKey={12}>My RSS Reader</MenuItem>
+                            </LinkContainer>
                         </NavDropdown>
                         <NavItem className="navbar-no-hover-bg" href="mailto:t.spaulding11@gmail.com" eventKey={6}>
                             <img className="navbar-image-link" src={require('file-loader!../img/gmail.png')} />

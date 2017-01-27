@@ -13,6 +13,7 @@ var PastProjects = require('../components/Pages/PastProjects/PastProjects');
 var GreensockAnimations = require('../components/Pages/GreensockAnimations/GreensockAnimations');
 var Weather = require('../components/Pages/Weather/Weather');
 var raader = require('../components/Pages/RSSReader');
+var TomRSSReader = require('../components/Pages/TomRSSReader');
 
 var routes = (
     <Router history={hashHistory}>
@@ -25,6 +26,7 @@ var routes = (
             <Route path="greensockAnimations" header="Greensock GSAP Animations" component={GreensockAnimations}/>
             <Route path="weather" header="Weather" component={Weather}/>
             <Route path="rssReader" header="RSS Reader" component={raader}/>
+            <Route path="tomRssReader" header="Tom RSS Reader" component={TomRSSReader}/>
         </Route>
     </Router>
 );
