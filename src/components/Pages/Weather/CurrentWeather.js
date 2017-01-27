@@ -57,7 +57,7 @@ var styles ={
     },
     icon: {
         fontSize: '10em',
-        marginBottom: '5px',
+        marginBottom: '30px',
         color: '#1761A0'
     },
     weatherDesc:{
