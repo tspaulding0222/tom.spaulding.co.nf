@@ -11,6 +11,8 @@ The site can be found live at [tomspaulding.co.nf](http://tomspaulding.co.nf/)
 - [Installation](#installation)
 - [Running](#running)
 - [Current Tech Used](#current-tech-used)
+- [Reminders](#reminders)
+- [API Used](#api-used)
 
 
 ## Installation
@@ -25,9 +27,23 @@ Installation Should be short and sweet:
 As of right now just simply
 
 * 'npm start' to start the app locally
+* 'npm run production' to create a production build inside dist folder inside the root directory
 
 ## Current Tech Used
 
 * [React JS](https://facebook.github.io/react/)
 * [Code Mirror](https://codemirror.net/)
 * [Bootstrap](http://getbootstrap.com/)
+* [ThreeJS](https://threejs.org/)
+
+### Reminders
+ 
+* ThreeJS cannot be modularized, so currently instead of being added via webpack the index.html contains the script src call instead
+* Cors error with my originally version of parsing RSS feeds. So until I can update, site is just using an iframe pointing to feedly for now.
+
+#### API Used
+
+* [Open Weather Map](https://openweathermap.org/api)
+* [Unsplash IT](https://unsplash.it/)
+
+
