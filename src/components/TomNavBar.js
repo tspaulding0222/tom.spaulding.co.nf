@@ -43,7 +43,10 @@ var NavBar = React.createClass({
                                 <MenuItem eventKey={12}>Weather</MenuItem>
                             </LinkContainer>
                             <LinkContainer to={{pathname: '/rssReader', query: {}}}>
-                                <MenuItem eventKey={12}>RSS Reader</MenuItem>
+                                <MenuItem eventKey={13}>RSS Reader</MenuItem>
+                            </LinkContainer>
+                            <LinkContainer to={{pathname: '/unsplash', query: {}}}>
+                                <MenuItem eventKey={14}>Unsplash Images</MenuItem>
                             </LinkContainer>
                         </NavDropdown>
                         <NavItem className="navbar-no-hover-bg" href="mailto:t.spaulding11@gmail.com" eventKey={6}>
