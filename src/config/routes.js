@@ -14,6 +14,7 @@ var GreensockAnimations = require('../components/Pages/GreensockAnimations/Green
 var Weather = require('../components/Pages/Weather/Weather');
 var raader = require('../components/Pages/RSSReader');
 var Unsplash = require('../components/Pages/Unsplah/Unsplash');
+var ThreeJS = require('../components/Pages/ThreeJS/ThreeJS');
 
 var routes = (
     <Router history={hashHistory}>
@@ -27,6 +28,7 @@ var routes = (
             <Route path="weather" header="Weather" component={Weather}/>
             <Route path="rssReader" header="RSS Reader" component={raader}/>
             <Route path="unsplash" header="Unsplash Images" component={Unsplash}/>
+            <Route path="threeJs" header="Three JS" component={ThreeJS}/>
         </Route>
     </Router>
 );
