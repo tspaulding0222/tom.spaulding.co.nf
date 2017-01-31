@@ -1,4 +1,5 @@
 var React = require('react');
+var Common = require('../../../libs/Common');
 
 var ThreeJsPlayground = React.createClass({
     initStat: function(){
@@ -11,7 +12,7 @@ var ThreeJsPlayground = React.createClass({
         document.getElementById("Stats-output").appendChild(stats.domElement);
         return stats;
     },
-    componentDidMount: function(){
+    start3Js: function(){
         var container = document.getElementById("threeJsPlaygroundContainer");
 
         var stats = this.initStat();
@@ -107,9 +108,13 @@ var ThreeJsPlayground = React.createClass({
         }
         renderScene();
     },
+    componentDidMount: function(){
+        Common.pageFadeIn(document.querySelector(".learn3JsPage"));
+        this.start3Js();
+    },
     render: function(){
         return (
-            <div>
+            <div className="learn3JsPage" style={{opacity: '0'}}>
                 <div className="container jumbotron">
                     <div className="jumbotron-overline"></div>
                     <h6>Learning ThreeJS Book Stuff Here</h6>

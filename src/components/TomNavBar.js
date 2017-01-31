@@ -56,9 +56,6 @@ var NavBar = React.createClass({
                             <LinkContainer to={{pathname: '/threeJs', query: {}}}>
                                 <MenuItem eventKey={15}>Three JS</MenuItem>
                             </LinkContainer>
-                            <LinkContainer to={{pathname: '/threeJsPlayground', query: {}}}>
-                                <MenuItem eventKey={15}>Three JS Playground</MenuItem>
-                            </LinkContainer>
                         </NavDropdown>
                         <NavItem className="navbar-no-hover-bg" href="mailto:t.spaulding11@gmail.com" eventKey={6}>
                             <img className="navbar-image-link" src={require('file-loader!../img/gmail.png')} />

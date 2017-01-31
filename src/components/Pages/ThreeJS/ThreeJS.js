@@ -9,7 +9,7 @@ var ThreeJS = React.createClass({
     },
     render: function () {
         return (
-            <div className="threeJSPage container">
+            <div style={{opacity: '0'}} className="threeJSPage container">
                 <div className="container jumbotron">
                     <div className="jumbotron-overline"></div>
                     <h6>Having Some fun with WebGL and ThreeJS</h6>
