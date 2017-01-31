@@ -5,6 +5,10 @@ var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     inject: 'body',
     favicon: __dirname + "/public/favicon.ico",
 });
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var CopyWebpackPluginConfig = new CopyWebpackPlugin([{
+    from: 'src/libs/ThreeJS', to:'src/libs/ThreeJS'
+}]);
 
 module.exports = {
     entry: [
@@ -23,5 +27,5 @@ module.exports = {
             { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
         ]
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [HtmlWebpackPluginConfig, CopyWebpackPluginConfig]
 };
