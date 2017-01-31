@@ -1,5 +1,6 @@
 var React = require('react');
 var ThreeCube = require('./ThreeCube');
+var ThreeParticles = require('./ThreeParticles');
 
 var ThreeJS = React.createClass({
     render: function () {
@@ -12,6 +13,7 @@ var ThreeJS = React.createClass({
                 </div>
 
                 <ThreeCube/>
+                <ThreeParticles/>
             </div>
         )
     }
