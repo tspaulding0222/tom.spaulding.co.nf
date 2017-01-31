@@ -1,6 +1,6 @@
 var React = require('react');
-var spriteTex = require('file-loader?emitFile=false!../../../img/perlin-512.png');
-var noiseTex = require('file-loader?emitFile=false!../../../img/particle2.png');
+var spriteTex = require('file-loader!../../../img/perlin-512.png');
+var noiseTex = require('file-loader!../../../img/particle2.png');
 
 var ThreeParticles = React.createClass({
     init: function(){

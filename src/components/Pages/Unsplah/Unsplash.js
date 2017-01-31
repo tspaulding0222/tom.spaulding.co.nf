@@ -16,7 +16,7 @@ var Unsplash = React.createClass({
             callback(data);
         });
     },
-    grabRandomImageFromList(data){
+    grabRandomImageFromList: function(data){
         var min = 0;
         var max = data.length;
 
@@ -24,7 +24,7 @@ var Unsplash = React.createClass({
 
         return data[rand];
     },
-    getUnsplashImageList(data){
+    getUnsplashImageList: function(data){
         var imageList = [];
 
         for(var i=0; i<this.state.numImages; i++){
