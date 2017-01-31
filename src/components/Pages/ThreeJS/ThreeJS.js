@@ -1,11 +1,15 @@
 var React = require('react');
 var ThreeCube = require('./ThreeCube');
 var ThreeParticles = require('./ThreeParticles');
+var Common = require('../../../libs/Common');
 
 var ThreeJS = React.createClass({
+    componentDidMount: function(){
+        Common.pageFadeIn(document.querySelector(".threeJSPage"));
+    },
     render: function () {
         return (
-            <div className="container">
+            <div className="threeJSPage container">
                 <div className="container jumbotron">
                     <div className="jumbotron-overline"></div>
                     <h6>Having Some fun with WebGL and ThreeJS</h6>
