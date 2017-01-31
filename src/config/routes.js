@@ -15,6 +15,7 @@ var Weather = require('../components/Pages/Weather/Weather');
 var raader = require('../components/Pages/RSSReader');
 var Unsplash = require('../components/Pages/Unsplah/Unsplash');
 var ThreeJS = require('../components/Pages/ThreeJS/ThreeJS');
+var Chapter1 = require('../components/Pages/LearningThreeJS/Chapter1');
 
 var routes = (
     <Router history={hashHistory}>
@@ -29,6 +30,7 @@ var routes = (
             <Route path="rssReader" header="RSS Reader" component={raader}/>
             <Route path="unsplash" header="Unsplash Images" component={Unsplash}/>
             <Route path="threeJs" header="Three JS" component={ThreeJS}/>
+            <Route path="chapter1" header="Learning Three.js Chapter 1" component={Chapter1}/>
         </Route>
     </Router>
 );

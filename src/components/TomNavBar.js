@@ -32,6 +32,11 @@ var NavBar = React.createClass({
                         <LinkContainer to={{pathname: '/androidTools', query:{}}}>
                             <NavItem eventKey={4}>Android Tools</NavItem>
                         </LinkContainer>
+                        <NavDropdown eventKey={16} title="Learning Three.js" id="learning3js">
+                            <LinkContainer to={{pathname: '/chapter1', query: {}}}>
+                                <MenuItem eventKey={17}>Chapter 1</MenuItem>
+                            </LinkContainer>
+                        </NavDropdown>
                         <NavDropdown eventKey={10} title="Misc" id="justForFunDropdown">
                             <LinkContainer to={{pathname: '/codeEditor', query: {}}}>
                                 <MenuItem eventKey={5}>Code Editor</MenuItem>
@@ -50,6 +55,9 @@ var NavBar = React.createClass({
                             </LinkContainer>
                             <LinkContainer to={{pathname: '/threeJs', query: {}}}>
                                 <MenuItem eventKey={15}>Three JS</MenuItem>
+                            </LinkContainer>
+                            <LinkContainer to={{pathname: '/threeJsPlayground', query: {}}}>
+                                <MenuItem eventKey={15}>Three JS Playground</MenuItem>
                             </LinkContainer>
                         </NavDropdown>
                         <NavItem className="navbar-no-hover-bg" href="mailto:t.spaulding11@gmail.com" eventKey={6}>
