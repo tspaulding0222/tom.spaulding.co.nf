@@ -17,7 +17,7 @@ var ThreeJS = React.createClass({
                 </div>
 
                 <ThreeCube/>
-                <ThreeParticles/>
+                {/*<ThreeParticles/>*/}
             </div>
         )
     }
