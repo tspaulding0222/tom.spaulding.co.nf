@@ -74,7 +74,6 @@ var ThreeJsPlayground = React.createClass({
         //Added to make chrome mac shadows look better
         spotLight.shadowMapHeight = 2048;
         spotLight.shadowMapWidth = 2048;
-        //
 
         scene.add(spotLight);
 
@@ -117,8 +116,8 @@ var ThreeJsPlayground = React.createClass({
             <div className="learn3JsPage" style={{opacity: '0'}}>
                 <div className="container jumbotron">
                     <div className="jumbotron-overline"></div>
-                    <h6>Learning ThreeJS Book Stuff Here</h6>
-                    <h3>Three JS Playground</h3>
+                    <h6>Chapter 1</h6>
+                    <h3>Learning Three.js</h3>
                 </div>
 
                 <div style={styles.threeJsPlaygroundContainer} id="threeJsPlaygroundContainer">

@@ -16,6 +16,9 @@ var raader = require('../components/Pages/RSSReader');
 var Unsplash = require('../components/Pages/Unsplah/Unsplash');
 var ThreeJS = require('../components/Pages/ThreeJS/ThreeJS');
 var Chapter1 = require('../components/Pages/LearningThreeJS/Chapter1');
+var Chapter2 = require('../components/Pages/LearningThreeJS/Chapter2');
+var Chapter2A = require('../components/Pages/LearningThreeJS/Chapter2A');
+var Chapter2CustomGeometry = require('../components/Pages/LearningThreeJS/Chapter2CustomGeometry');
 
 var routes = (
     <Router history={hashHistory}>
@@ -31,6 +34,9 @@ var routes = (
             <Route path="unsplash" header="Unsplash Images" component={Unsplash}/>
             <Route path="threeJs" header="Three JS" component={ThreeJS}/>
             <Route path="chapter1" header="Learning Three.js Chapter 1" component={Chapter1}/>
+            <Route path="chapter2" header="Learning Three.js Chapter 2" component={Chapter2}/>
+            <Route path="chapter2a" header="Learning Three.js Chapter 2 Geometrys" component={Chapter2A}/>
+            <Route path="chapter2b" header="Learning Three.js Chapter 2 Custom Geometry" component={Chapter2CustomGeometry}/>
         </Route>
     </Router>
 );
