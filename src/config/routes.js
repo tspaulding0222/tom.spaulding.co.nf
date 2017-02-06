@@ -19,6 +19,7 @@ var Chapter1 = require('../components/Pages/LearningThreeJS/Chapter1');
 var Chapter2 = require('../components/Pages/LearningThreeJS/Chapter2');
 var Chapter2A = require('../components/Pages/LearningThreeJS/Chapter2A');
 var Chapter2CustomGeometry = require('../components/Pages/LearningThreeJS/Chapter2CustomGeometry');
+var Chapter2Mesh = require('../components/Pages/LearningThreeJS/Chapter2Mesh');
 
 var routes = (
     <Router history={hashHistory}>
@@ -37,6 +38,7 @@ var routes = (
             <Route path="chapter2" header="Learning Three.js Chapter 2" component={Chapter2}/>
             <Route path="chapter2a" header="Learning Three.js Chapter 2 Geometrys" component={Chapter2A}/>
             <Route path="chapter2b" header="Learning Three.js Chapter 2 Custom Geometry" component={Chapter2CustomGeometry}/>
+            <Route path="chapter2c" header="Learning Three.js Chapter 2 Mesh" component={Chapter2Mesh}/>
         </Route>
     </Router>
 );

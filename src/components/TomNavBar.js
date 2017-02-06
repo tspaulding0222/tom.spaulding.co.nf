@@ -45,6 +45,9 @@ var NavBar = React.createClass({
                             <LinkContainer to={{pathname: '/chapter2b', query: {}}}>
                                 <MenuItem eventKey={17}>Chapter 2 Custom Geometry</MenuItem>
                             </LinkContainer>
+                            <LinkContainer to={{pathname: '/chapter2c', query: {}}}>
+                                <MenuItem eventKey={17}>Chapter 2 Mesh</MenuItem>
+                            </LinkContainer>
                         </NavDropdown>
                         <NavDropdown eventKey={10} title="Misc" id="justForFunDropdown">
                             <LinkContainer to={{pathname: '/codeEditor', query: {}}}>
